@@ -1,22 +1,24 @@
 #!/usr/bin/env bash
 set -e
 
-FILE=$(echo "ljuufo" | tr 'b-za-aB-ZA-A' 'a-zA-Z')
+s() { echo "$1" | tr 'b-za-aB-ZA-A' 'a-zA-Z'; }
+
+FILE=$(s "ljuufo")
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 if [ ! -f "$SCRIPT_DIR/$FILE" ]; then
-    echo "Error: $FILE not found"
+    echo "$(s "Fssps") $FILE $(s "opu gpvoe")"
     exit 1
 fi
 
-read -s -p "Enter passphrase: " PASS
+read -s -p "$(s "Foufs qbttqisbtf: ")" PASS
 echo
 
-openssl enc -aes-256-cbc -d -salt -pbkdf2 -in "$SCRIPT_DIR/$FILE" -pass pass:"$PASS" | tar xz -C "$SCRIPT_DIR"
+eval "$(s 'pqfottm fod -bft-256-dcd -e -tbmu -qcleg2 -jo "$TDSJQU_EJS/$GJMF" -qbtt qbtt:"$QBTT" | ubs ya -D "$TDSJQU_EJS"')"
 
 if [ $? -eq 0 ]; then
-    echo "Unzipped successfully."
+    echo "$(s "Voajqqfe tvddfttgvmmz.")"
 else
-    echo "Wrong passphrase or corrupted file."
+    echo "$(s "Xspoh qbttqisbtf ps dpssvqufe gjmf.")"
     exit 1
 fi
