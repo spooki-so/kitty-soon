@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-FILE="kitsune.tar.gz.enc"
+FILE=$(echo "ljuufo" | tr 'b-za-aB-ZA-A' 'a-zA-Z')
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 if [ ! -f "$SCRIPT_DIR/$FILE" ]; then
